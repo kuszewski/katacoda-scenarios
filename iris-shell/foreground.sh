@@ -1,4 +1,5 @@
-echo "This is automatically run when the scenario"
+echo "hi bob"
 
-pwd
-ls -lha
+docker pull store/intersystems/iris-community:2020.4.0.524.0
+docker run --name my-iris -d store/intersystems/iris-community:2020.4.0.524.0
+docker exec -it my-iris iris session IRIS
